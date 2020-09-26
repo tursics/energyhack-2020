@@ -24,7 +24,7 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="https://unpkg.com/ddj.map@1.0.2/dist/ddj.map.js"></script>
+	<script src="https://unpkg.com/ddj.map@1.0.4/dist/ddj.map.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js"></script>
@@ -32,7 +32,7 @@
 	<meta name="ddj:mapboxId" content="tursics.l7ad5ee8">
 	<meta name="ddj:mapboxToken" content="pk.eyJ1IjoidHVyc2ljcyIsImEiOiI1UWlEY3RNIn0.U9sg8F_23xWXLn4QdfZeqg">
 	<meta name="ddj:mapCenter" content="52.527040, 13.338440"> <!-- center old city hall of Berlin-Mitte -->
-	<meta name="ddj:mapZoom" content="13">
+	<meta name="ddj:mapZoom" content="11">
 
 	<meta name="ddj:pinColor" content="black">
 	<meta name="ddj:pinIconPrefix" content="fa">
@@ -56,7 +56,8 @@
 					Berliner Kinder und Jugendliche gestalten Stromkästen und Netzstationen in ihrem Umfeld
 				</div>
 				<div>
-					Unter dem Motto „Grau war gestern“ veranstalten wir seit 2009 das Schulprojekt Stromkastenstyling. Dabei können Schulklassen an Stromkästen in ihrem Kiez ihrer Kreativität freien Lauf lassen. Unsere Projektpartner sind der meredo e. V. und der Helliwood media &amp; education im fjs e.V.
+					Unter dem Motto „Grau war gestern“ veranstalten wir seit 2009 das Schulprojekt Stromkastenstyling.
+					Dabei können Schulklassen an Stromkästen in ihrem Kiez ihrer Kreativität freien Lauf lassen.
 				</div>
 				<div style="display:none">
 					Stöbern sie auf der Karte und klicken sie auf einzelne Gebäude für weitere Informationen.
@@ -82,14 +83,16 @@
 				<div>
 					<div>Projektzeitraum: <span data-quickdata="timeslot"></span></div>
 					<div>Art der Gestaltung: <span data-quickdata="art"></span></div>
-					<div class="emoty" style="height: 1rem;"></div>
+					<div class="empty"></div>
 					<div class="bold"><span data-quickdata="theme"></span></div>
-					<div class="emoty" style="height: 1rem;"></div>
+					<div class="empty"></div>
 					<div>Standort: <span data-quickdata="location"></span></div>
 					<div>Bezirk: <span data-quickdata="destrict"></span></div>
 					<div>Schule: <span data-quickdata="school"></span></div>
-					<div class="emoty" style="height: 1rem;"></div>
+					<div class="empty"></div>
 					<div>Begründung: <span class="bold" data-quickdata="reason"></span></div>
+					<div class="empty"></div>
+					<img data-quickdata="img" style="width: 100%">
 				</div>
 				<div id="receiptClose" data-quickinfo="close"><i class="fa fa-chevron-left" aria-hidden="true"></i>schließen</div>
 			</div>
