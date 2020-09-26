@@ -40,6 +40,134 @@
 
 </head>
 <body>
-	<div data-role="page" id="map"></div>
+	<div data-role="page" id="pageMap">
+		<div role="main" class="ui-content" id="map">
+			<div class="attribution">
+				<a href="https://www.npmjs.com/package/ddj.map" title="ddj.map">ddj.map</a>
+			</div>
+		</div>
+		<div class="bigSign">
+			<div class="sign visibleWithoutErrors" id="infoSign" data-welcome="box">
+				<h3>
+					Schulprojekt „Stromkastenstyling“
+				</h3>
+				<div class="signLine">
+					Berliner Kinder und Jugendliche gestalten Stromkästen und Netzstationen in ihrem Umfeld
+				</div>
+				<div>
+					Unter dem Motto „Grau war gestern“ veranstalten wir seit 2009 das Schulprojekt Stromkastenstyling. Dabei können Schulklassen an Stromkästen in ihrem Kiez ihrer Kreativität freien Lauf lassen. Unsere Projektpartner sind der meredo e. V. und der Helliwood media &amp; education im fjs e.V.
+				</div>
+				<div style="display:none">
+					Stöbern sie auf der Karte und klicken sie auf einzelne Gebäude für weitere Informationen.
+				</div>
+				<div style="display:none">
+					<div class="visibleWithData hideMobile" style="padding-bottom: 0;">
+						Oder suchen sie nach einem Gebäude:
+					</div>
+					<div data-search="box" class="searchInput visibleWithData hideMobile">
+						<input type="text" name="schools" id="autocomplete" data-search="textinput" placeholder="hier suchen" />
+						<div><i class="fa fa-search" aria-hidden="true"></i></div>
+					</div>
+				</div>
+				<div class="visibleWithoutData center">
+					<i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+				</div>
+			</div>
+			<div class="sign normal" id="receipt" data-quickinfo="box">
+				<h3>
+					<span data-quickdata="title"></span>
+				</h3>
+				<div class="signLine"><span data-quickdata="type"></span></div>
+				<div>
+					<div>Projektzeitraum: <span data-quickdata="timeslot"></span></div>
+					<div>Art der Gestaltung: <span data-quickdata="art"></span></div>
+					<div class="emoty" style="height: 1rem;"></div>
+					<div class="bold"><span data-quickdata="theme"></span></div>
+					<div class="emoty" style="height: 1rem;"></div>
+					<div>Standort: <span data-quickdata="location"></span></div>
+					<div>Bezirk: <span data-quickdata="destrict"></span></div>
+					<div>Schule: <span data-quickdata="school"></span></div>
+					<div class="emoty" style="height: 1rem;"></div>
+					<div>Begründung: <span class="bold" data-quickdata="reason"></span></div>
+				</div>
+				<div id="receiptClose" data-quickinfo="close"><i class="fa fa-chevron-left" aria-hidden="true"></i>schließen</div>
+			</div>
+			<div class="sign visibleWithErrors" id="errorPAge">
+				<h3>
+					Es ist ein Fehler aufgetreten
+				</h3>
+				<div class="signLine">
+					Entschuldigung, das hätte nicht passieren sollen
+				</div>
+				<div>
+					Bitte lade diese Seite noch einmal neu oder schicke mir eine <a href="mailto:thomas@tursics.de">Nachricht per E-Mail</a>.
+				</div>
+			</div>
+		</div>
+		<div data-role="popup" id="popupShare" data-theme="a" class="ui-corner-all">
+			<div style="padding:0;margin:-1px 0 0 -1px;overflow-x:hidden;">
+				<div data-role="tabs" id="tabs" style="padding:0;">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#shareLink" id="tabShareLink" data-ajax="false" class="ui-btn-active">Link teilen</a></li>
+							<li><a href="#embedMap" id="tabEmbedMap" data-ajax="false">Karte einbetten</a></li>
+						</ul>
+					</div>
+					<div id="shareLink" class="ui-body-d ui-content">
+						<div>
+							In sozialen Netzwerken teilen:
+							<div class="social">
+								<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.tursics.de%2Fstory%2Fschule-mitte-Baumassnahmeplanung-2020%2F" rel="popup" title="Bei Facebook teilen">Facebook<span></span></a>
+								<a class="twitter"  href="https://twitter.com/intent/tweet?text=Gebäudesanierung%202020%20und%202021&amp;url=http://www.tursics.de/story/schule-mitte-Baumassnahmeplanung-2020/" rel="popup" title="Bei Twitter teilen">Twitter<span></span></a>
+								<a class="whatsapp" href="whatsapp://send?text=Gebäudesanierung%202020%20und%202021%3A%20http%3A%2F%2Fwww.tursics.de%2Fstory%2Fschule-mitte-Baumassnahmeplanung-2020%2F" rel="popup" title="Bei WhatsApp teilen">WhatsApp<span></span></a>
+							</div>
+						</div>
+						<div>
+							oder den Link kopieren:<br>
+							<input value="http://www.tursics.de/story/schule-mitte-Baumassnahmeplanung-2020/">
+						</div>
+						<div style="text-align:center;margin:0;"><a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">Schließen</a></div>
+					</div>
+					<div id="embedMap" class="ui-body-d ui-content">
+						<div style="width:400px">
+							Den Codeschnipsel können Sie direkt in Ihre Webseite oder in Ihren Wordpress-Blog einbauen.<br>
+						</div>
+						<div class="ui-field-contain ui-grid-b">
+							<div class="ui-block-a" style="padding:0 1em 0 0;margin:0;">
+								<select id="selectEmbedSize" data-native-menu="false" data-inline="false">
+									<option value="400x300">Klein</option>
+									<option value="650x450">Mittel</option>
+									<option value="800x600">Groß</option>
+								</select>
+							</div>
+							<div class="ui-block-b" style="width:66.666%;padding:.25em 0 0 0;margin:0;">
+								<input id="inputEmbedURI" value="" data-inline="true">
+							</div>
+						</div>
+						<iframe></iframe>
+						<div style="text-align:center;margin:.8em 0 0 0;"><a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">Schließen</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="popup" data-icon="fa fa-info" id="popupAuthor" data-theme="a" class="ui-corner-all">
+			<div style="padding:10px 20px;">
+				<h3>Über die Karte</h3>
+				<div>
+ 					Berlin, 08.09.2020 / Pre-Release
+				</div>
+				<div>
+					Die Daten stehen auf der <a href="https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/schul-und-sportamt/der-fachbereich-schulbau-und-infrastruktur-725304.php" target="_blank">Webseite des Fachbereiches Schulbau- und Infrastruktur</a> bereit
+					und können als <a href="http://tursics.de/story/schule-mitte-Baumassnahmeplanung-2020/data/spreadsheets.php">Rohdaten heruntergeladen</a> werden.
+					Die Webseitenquelltexte können Sie <a href="https://github.com/tursics/schule-mitte-Baumassnahmeplanung-2020">auf github</a> ansehen und frei (MIT-Lizenz) verwenden.
+					Die Icons wurden von <a href="https://www.flaticon.com/de/autoren/freepik" title="Freepik">Freepik</a> über <a href="https://www.flaticon.com/de/" title="Flaticon"> www.flaticon.com</a> bereit gestellt.
+				</div>
+				<div>
+					Haben Sie eine Anmerkung oder einen Fehler entdeckt, dann freue ich mich über <a href="mailto:thomas@tursics.de">Ihre E-Mail</a>.
+				</div>
+				<div style="text-align:center;margin:.8em 0 0 0;"><a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">Schließen</a></div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
