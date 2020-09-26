@@ -862,3 +862,60 @@ i.pin.pin-welder::before {
 }
 
 /* */
+
+.bigSign {
+}
+.bigSign:after {
+	display: none;
+}
+.bigSign .sign {
+	transform: rotateY(0);
+	color: #fff;
+    background: #16649c;
+    background-image: -webkit-gradient(linear,left top,right top,from(#16649c),to(#2ea4d2));
+    background-image: -o-linear-gradient(left,#16649c,#2ea4d2);
+    background-image: linear-gradient(to right,#16649c,#2ea4d2);
+    border-radius: 9px;
+	box-shadow: #0093d0 0 0 1px;
+}
+.bigSign .sign > div.signLine {
+    background: #fff;
+    color: #0093d0;
+}
+.bold {
+    color: #0b2733;
+}
+#receiptClose:hover, #filterOpen:hover, #filterClose:hover {
+	background: #0093d0;
+	color: #fff;
+}
+.leaflet-control-attribution, .leaflet-container a {
+	color: #fff !important;
+    background: #16649c !important;
+    background-image: -webkit-gradient(linear,left top,right top,from(#16649c),to(#2ea4d2)) !important;
+    background-image: -o-linear-gradient(left,#16649c,#2ea4d2) !important;
+    background-image: linear-gradient(to right,#16649c,#2ea4d2) !important;
+}
+#popupAuthor a, #popupInfo a {
+	color: #0093d0;
+}
+#popupAuthor a:hover, #popupInfo a:hover {
+	border-bottom-color: #0093d0;
+}
+.ui-btn.ui-btn-a {
+	background: #0093d0 !important;
+	border-color: #0093d0 !important;
+}
+.ui-btn.ui-btn-a:hover {
+	color: #0093d0 !important;
+}
+#popupShare li.ui-tabs-active .ui-btn.ui-btn-active {
+    background: #16649c;
+    background-image: -webkit-gradient(linear,left top,right top,from(#16649c),to(#2ea4d2));
+    background-image: -o-linear-gradient(left,#16649c,#2ea4d2);
+    background-image: linear-gradient(to right,#16649c,#2ea4d2);
+	color: #fff;
+	border-bottom-color: #0093d0;
+}
+
+/* */
