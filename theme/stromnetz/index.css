@@ -864,6 +864,14 @@ i.pin.pin-welder::before {
 /* */
 
 .bigSign {
+	max-width: 33vw;
+	width: 33vw;
+}
+@media (max-width: 35em) {
+	.bigSign {
+		max-width: none;
+		width: auto;
+	}
 }
 .bigSign:after {
 	display: none;
